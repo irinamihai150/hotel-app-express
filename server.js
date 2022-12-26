@@ -34,7 +34,7 @@ app.get("/bookings/:id", (req, res) => {
 app.delete("/bookings/:id", (req, res) => {
   const bookingId = bookings.find((b) => b.id === parseInt(req.params.id));
   if (!bookingId)
-    return res.status(404).send("The course with the given ID was not found.");
+    return res.status(404).send("The booking with the given ID was not found.");
   const index = bookings.indexOf(bookingId);
   //delete
   bookings.splice(index, 1);
